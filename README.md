@@ -22,8 +22,8 @@ We get data in three forms from an interviewee:
 
 
 ### Audio Approach:
-- We take the .mp4 video file and use it to convert it to an audio file with the help of the Moviepy library.
-- This audio is then converted into text or transcript using the Whisper library from OpenAI. We run this library on Google Colab due to hardware constraints to run it locally.
+- We take the .mp4 video file and use it to convert it to an audio file with the help of the Moviepy library. Link: https://pypi.org/project/moviepy/
+- This audio is then converted into text or transcript using the Whisper library from OpenAI. We run this library on Google Colab due to hardware constraints to run it locally. We took help of this particular repository for Whisper API : https://github.com/openai/whisper
 - The audio transcript is now analysed using three methods:
 - **_Silence Time Analysis_**: Based on the change in the decibels of sound emitted during an interview, we can identify moments of silence where a candidate cannot think on their feet and are underconfident about their abilities to convert their free-flowing thoughts into speech. We use a threshold of 3s to help us identify their confidence in their speech. This can determine their soft skills, like good oratory skills.
 - **_Emotion Analysis_**: We use the VADER(a sentiment reasoning library) and the NLTK library to determine whether the text expresses a positive, negative or neutral emotion. This can again be used to determine their soft skills, like good oratory skills.
